@@ -1,0 +1,784 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+
+body {
+  background-color: black;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  zoom: 0.58;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+}
+.sun {
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  display: flex;
+  height: 100px;
+  background-size: 100%;
+  width: 100px;
+  border-radius: 50%;
+  background: url("https://cdn.pixabay.com/photo/2012/01/09/09/10/sun-11582_960_720.jpg");
+  background-position: center center;
+  box-shadow: 1px 1px 100px 10px #f08112, inset -2px -2px 20px 5px black;
+  animation: pole-rotate 30s linear infinite;
+}
+.sun:hover {
+  box-shadow: #e59e1b 2px 2px 100px 20px, inset -2px -2px 20px 5px black;
+}
+@keyframes pole-rotate {
+  0% {
+    background-position: center center;
+  }
+  50% {
+    background-position: 50% 40%;
+  }
+  to {
+    transform: rotate(360deg);
+    background-position: center center;
+  }
+}
+
+/* ---------- Container for the orbiting circles animation ---------- */
+#circle-orbit-container {
+  position: absolute;
+  bottom: 0%;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Mercury orbit - This is the circles closest to the sun ---------- */
+#Mercury-orbit {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 125px;
+  height: 125px;
+  border: 0.1px #837f7e89 solid;
+  border-radius: 100%;
+  animation: spin-right 5s linear infinite;
+}
+#Mercury-orbit:hover {
+  border: solid 3px #c1bcbb;
+  animation-play-state: paused;
+}
+#Mercury-orbit:hover .Mercury-orbit-circles {
+  border: solid 2px #c1bcbb;
+}
+/* ---------- Repeating styles for the Mercury orbiting circles ---------- */
+.Mercury-orbit-circles {
+  position: absolute;
+  top: 60px;
+  left: -6px;
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  background: radial-gradient(at top, #dbdbdb, #454545);
+  box-shadow: 0.5px 3px 5px black inset;
+  animation: rotate 10s linear infinite;
+}
+
+/* ---------- venus orbit - This is the circles second closest to the central point ---------- */
+#venus-orbit {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 170px;
+  border: 0.1px #8e461394 solid;
+  border-radius: 100%;
+  animation: spin-right 8s linear infinite;
+}
+#venus-orbit:hover {
+  border: 3px solid #d28146;
+  animation-play-state: paused;
+}
+#venus-orbit:hover .venus-orbit-circles {
+  border: 2px solid #d28146;
+}
+
+/* ---------- Repeating styles for the venus orbiting circles ---------- */
+.venus-orbit-circles {
+  position: absolute;
+  top: 17px;
+  left: 15px;
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/PIA00271_Venus_%28Computer_Simulated_Global_View_of_the_Northern_Hemisphere%29.jpg/600px-PIA00271_Venus_%28Computer_Simulated_Global_View_of_the_Northern_Hemisphere%29.jpg")
+    no-repeat;
+  background-size: 100% 100%;
+  box-shadow: 0.5px 3px 5px black inset;
+  animation: rotate 20s linear infinite;
+}
+
+/* ---------- earth orbit - This is the circles furthest away from the central point ---------- */
+#earth-orbit {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  height: 230px;
+  border: 0.1px #0f7dd1a2 solid;
+  border-radius: 100%;
+  animation: spin-right 10s linear infinite;
+}
+
+/* ---------- Repeating styles for the earth orbiting circles ---------- */
+.earth-orbit-circles {
+  position: absolute;
+  top: -12px;
+  left: 125px;
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  background: url(https://media.discordapp.net/attachments/1066457384492482683/1120343822719791174/IMG-20230619-WA0006.jpg);
+  background-size: 100%;
+  animation: rotate 20s linear infinite;
+}
+#earth-orbit:hover {
+  border: solid 3px #0f7dd1;
+  animation-play-state: paused;
+}
+
+#earth-orbit:hover .earth-orbit-circles {
+  border: solid 2px #0f7dd1;
+}
+/* ---------- mars orbit - This is the circles furthest away from the central point ---------- */
+#mars-orbit {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 310px;
+  height: 310px;
+  border: 0.1px rgba(246, 110, 86, 0.548) solid;
+  border-radius: 100%;
+  animation: spin-right 20s linear infinite;
+  animation-play-state: running;
+}
+#mars-orbit:hover {
+  border: solid 3px rgb(241, 67, 67);
+  animation-play-state: paused;
+}
+#mars-orbit:hover .mars-orbit-circles {
+  border: solid 2px rgb(241, 67, 67);
+}
+
+/* ---------- Repeating styles for the earth orbiting circles ---------- */
+.mars-orbit-circles {
+  position: absolute;
+  top: -13px;
+  left: 125px;
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Mars_23_aug_2003_hubble.jpg/267px-Mars_23_aug_2003_hubble.jpg");
+  background-size: 100% 100%;
+  animation: rotate 80s linear infinite;
+}
+
+/*---------- Jupiter orbit - This is the circles furthest away from the central point ---------- */
+#Jupiter-orbit {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 420px;
+  height: 420px;
+  border: 0.1px rgba(129, 122, 111, 0.66) solid;
+  border-radius: 100%;
+  animation: spin-right 110s linear infinite;
+}
+
+#Jupiter-orbit:hover {
+  border: solid 3px rgb(192, 191, 189);
+  animation-play-state: paused;
+}
+#Jupiter-orbit:hover .Jupiter-orbit-circles {
+  border: solid 2px rgb(192, 189, 189);
+}
+/* ---------- Repeating styles for the Jupiter orbiting circles ---------- */
+.Jupiter-orbit-circles {
+  position: absolute;
+  top: -20px;
+  left: 125px;
+  height: 55px;
+  width: 55px;
+  border-radius: 100%;
+  background: url(https://solarsystem.nasa.gov/internal_resources/3794/);
+  background-size: 150% 150%;
+  background-position: center center;
+  animation: rotate 200s linear infinite;
+}
+
+/*---------- Saturn orbit - This is the circles furthest away from the central point ---------- */
+#Saturn-orbit {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 550px;
+  height: 550px;
+  border: 0.1px rgba(233, 243, 124, 0.621) solid;
+  border-radius: 100%;
+  animation: spin-right 290s linear infinite;
+}
+#Saturn-orbit:hover {
+  border: solid 3px rgb(244, 251, 174);
+  animation-play-state: paused;
+}
+#Saturn-orbit:hover .Saturn-orbit-circles {
+  border: rgb(244, 251, 174) solid 1px;
+}
+/* ---------- Repeating styles for the Saturn orbiting circles ---------- */
+.Saturn-orbit-circles {
+  position: absolute;
+  top: -5px;
+  left: 125px;
+  height: 65px;
+  width: 65px;
+  border-radius: 100%;
+  background: url("https://rwspace.ru/wp-content/uploads/2018/12/2-17.jpg");
+  background-size: 100% 100%;
+  background-position: center center;
+  transform: rotate(71deg);
+}
+
+/*---------- Uranus orbit - This is the circles furthest away from the central point ---------- */
+#Uranus-orbit {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 680px;
+  height: 680px;
+  border: 0.1px rgba(185, 239, 247, 0.632) solid;
+  border-radius: 100%;
+  animation: spin-right 840s linear infinite;
+}
+#Uranus-orbit:hover {
+  border: 3px solid rgb(208, 248, 254);
+  animation-play-state: paused;
+}
+#Uranus-orbit:hover .Uranus-orbit-circles {
+  border: 2px solid rgb(208, 248, 254);
+}
+
+/* ---------- Repeating styles for the earth orbiting circles ---------- */
+.Uranus-orbit-circles {
+  position: absolute;
+  top: 41px;
+  left: 125px;
+  height: 38px;
+  width: 38px;
+  border-radius: 100%;
+  background: radial-gradient(circle at top, #a9f5f5, #3c7483);
+  animation: rotate 340s linear infinite;
+}
+
+#Neptune-orbit {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 790px;
+  height: 790px;
+  border: 0.1px rgba(69, 105, 248, 0.656) solid;
+  border-radius: 100%;
+  -webkit-animation: spin-right 164s linear infinite;
+  animation: spin-right 1640s linear infinite;
+}
+#Neptune-orbit:hover {
+  border: #269df8 3px solid;
+}
+#Neptune-orbit:hover .Neptune-orbit-circles {
+  border: #269df8 2px solid;
+}
+
+/* ---------- Repeating styles for the earth orbiting circles ---------- */
+.Neptune-orbit-circles {
+  position: absolute;
+  top: 80px;
+  left: 125px;
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Neptune_Full.jpg/600px-Neptune_Full.jpg");
+  background-size: 120% 120%;
+  background-position: center center;
+  animation: rotate 360s linear infinite;
+}
+.planet_name {
+  display: flex;
+  overflow-x: scroll;
+  flex-direction: row;
+  position: absolute;
+  bottom: 3%;
+  height: 6%;
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.show_btn_1 {
+  margin-right: 1%;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 8%;
+  color: #ffe6c7;
+  height: 100%;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-size: 140%;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.planet_name {
+  overflow-x: hidden;
+}
+
+.show_btn_1:hover {
+  background-color: rgb(255, 215, 0.8);
+  color: #16161d;
+  animation: move 0.8s ease-in;
+}
+
+.click_hover {
+  display: block;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  font-family: "Montserrat", sans-serif;
+}
+.click_hover h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 300%;
+  margin-bottom: 5%;
+  color: #ffd700;
+}
+.click_hover h3 {
+  font-size: 110%;
+  color: #ffe6c7;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ---------- Animation ---------- */
+@keyframes spin-right {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.sun-1,
+.earth-1,
+.Saturn-1,
+.Jupiter-1,
+.Mercury-1,
+.venus-1,
+.mars-1,
+.Uranus-1,
+.Neptune-1 {
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  font-size: 180%;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  height: 103%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+.img-earth,
+.img_saturn,
+.img_Jupiter,
+.img-Mercury,
+.img-venus,
+.img-mars,
+.img-Uranus,
+.img-Neptune {
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 60%;
+  width: 1200px;
+  height: 1200px;
+  background-size: 100% 150%;
+  overflow-x: hidden;
+  background-position: center center;
+  background-repeat: repeat;
+}
+.img_Jupiter {
+  box-shadow: 0 -850px 250px black inset,
+    -2px 2px 150px 4px inset rgb(238 230 120 / 59%), 0px -20px 100px 4px inset,
+    0 -300px 700px -200px #9aa05fd4;
+  background-image: url(https://media.discordapp.net/attachments/1066457384492482683/1120343823185354802/IMG-20230619-WA0008.jpg);
+}
+.img-Mercury {
+  box-shadow: 0 -850px 250px black inset,
+    -2px 2px 150px 4px inset rgb(238, 153, 120), 0px -20px 100px 4px inset,
+    0 -300px 700px -200px #a07f5f;
+  background-image: url(https://www.solarsystemscope.com/images/textures/full/2k_makemake_fictional.jpg);
+}
+
+.img-venus {
+  box-shadow: 0 -850px 250px black inset,
+    -2px 2px 150px 4px inset rgb(238, 177, 120), 0px -20px 100px 4px inset,
+    0 -300px 700px -200px #a08b5f;
+  background-image: url(https://nasa3d.arc.nasa.gov/shared_assets/images/ven0aaa2/ven0aaa2-copy-428-321.jpg);
+}
+
+.img-earth {
+  box-shadow: 0 -850px 250px black inset,
+    -2px 2px 150px 4px inset rgba(94, 122, 167, 0.837),
+    0px -20px 100px 4px inset, 0 -300px 700px -200px #527d8ee3;
+  background-image: url(https://img00.deviantart.net/04ef/i/2009/114/3/e/new_earth_texture_map_by_lightondesigns.jpg);
+}
+.moon-img {
+  display: block;
+  bottom: 21%;
+  left: 20%;
+  position: absolute;
+  background: url("https://cdn.discordapp.com/attachments/1066457384492482683/1120686062524694618/249190631_1771811609680637_2505278721929572639_n.png");
+  background-size: 100% 100%;
+  background-position: 50% 50%;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  box-shadow: rgb(60, 59, 59) 1px 1px 20px 5px, inset -16px -8px 20px 5px black;
+}
+.moon {
+  padding: 10px;
+  display: block;
+  border: none;
+  background-color: #393a3b49;
+  position: absolute;
+  left: 20%;
+  border-radius: 10%;
+  bottom: -30%;
+  color: #0f7dd1;
+}
+
+.img-mars {
+  box-shadow: 0 -850px 250px black inset,
+    -2px 2px 150px 4px inset rgb(238, 124, 120), 0px -20px 100px 4px inset,
+    0 -300px 700px -200px #a0695f;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/mars_texture.jpg);
+}
+
+.img_saturn {
+  box-shadow: 0 -850px 250px black inset,
+    -2px 2px 150px 4px inset rgb(238, 199, 120), 0px -20px 100px 4px black inset,
+    0 -150px 700px -200px #d6d772;
+  background-image: url(https://www.solarsystemscope.com/images/textures/full/2k_saturn.jpg);
+}
+
+.img-Neptune {
+  box-shadow: 0 -850px 250px black inset,
+    -2px 2px 150px 4px inset rgb(120, 173, 238), 0px -20px 100px 4px inset,
+    0 -300px 700px -200px #5f75a0;
+  background-image: url(https://img00.deviantart.net/f068/i/2017/165/b/c/neptune_texture_map_by_jcpag2010-dbcjcv5.png);
+}
+
+.img-Uranus {
+  box-shadow: 0 -850px 250px black inset,
+    -2px 2px 150px 4px inset rgb(120, 238, 232), 0px -20px 100px 4px inset,
+    0 -300px 700px -200px #5fa091;
+  background-image: url(https://img00.deviantart.net/957c/i/2017/165/4/9/uranus_texture_map_by_jcpag2010-db7yjwb.png);
+}
+
+.style-img-planet {
+  animation: com1-planet 3s, rotateY 60s linear infinite;
+}
+.img {
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 60%;
+  width: 1000px;
+  height: 1000px;
+  overflow: hidden;
+  background-image: url(https://media.discordapp.net/attachments/1066457384492482683/1120343823537668188/IMG-20230619-WA0007.jpg);
+  background-position: center center;
+  background-size: 112%;
+  background-repeat: repeat;
+  box-shadow: rgb(231, 124, 9) 1px -1px 200px 20px,
+    rgb(150, 68, 6) 1px -1px 600px 2px inset, black 1px 1px 100px 20px inset;
+}
+
+.hide_btn {
+  top: 5%;
+  padding: 0;
+  padding-bottom: 6px;
+  width: 65px;
+  height: 50px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 5%;
+  font-size: 50px;
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  color: rgb(202, 207, 212);
+  border: none;
+  cursor: pointer;
+}
+
+.hide_btn:hover {
+  background-color: rgb(189, 11, 11);
+  color: #454545;
+}
+
+/* General container for info, uses flexbox for alignment */
+.info {
+  display: flex;
+  align-items: center;
+  padding-top: 1%;
+  height: 60%;
+  width: 100%;
+  flex-direction: column;
+}
+
+/* Hides scrollbar for .info class elements */
+.info::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hides scrollbar for .info-1 class elements */
+.info-1::-webkit-scrollbar {
+  display: none;
+}
+
+/* Container for first info type, uses flexbox for alignment and allows for scroll */
+.info-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+}
+
+/* Adds a block display and animation to the .styling class */
+.styling {
+  display: block;
+  animation: com 1.5s;
+}
+
+/* Adds a multiple animations to .img-style class */
+.img-style {
+  animation: com1 3s, rotateX 300s linear infinite;
+}
+/* Defines style for show button with absolute positioning, rounded corners and a semi-transparent background color */
+.show_btn,
+.show_btn_earth {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  color: #0f7dd1;
+  opacity: 0;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+}
+
+@keyframes com {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes com1 {
+  0% {
+    transform: translateY(100%);
+  }
+  35% {
+    box-shadow: rgb(243, 143, 35) 1px -1px 300px 80px,
+      rgb(150, 68, 6) 1px -1px 600px 2px inset;
+    transform: translateY(100%);
+  }
+  40% {
+    box-shadow: rgb(243, 154, 58) 1px -1px 350px 300px,
+      rgb(150, 68, 6) 1px -1px 600px 2px inset;
+  }
+  50% {
+    box-shadow: rgb(243, 154, 58) 1px -1px 5000px 700px,
+      rgb(150, 68, 6) 1px -1px 600px 2px inset;
+  }
+  80% {
+    box-shadow: rgb(243, 154, 58) 1px -1px 300px 200px,
+      rgb(150, 68, 6) 1px -1px 600px 2px inset;
+  }
+  100% {
+    box-shadow: rgb(244, 164, 78) 1px -1px 300px 100px,
+      rgb(150, 68, 6) 1px -1px 600px 2px inset, black 1px 1px 10px 5px;
+    transform: translateY(0);
+  }
+}
+@keyframes com1-planet {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  30% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotateX {
+  50% {
+    transform: rotate(180deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotateY {
+  to {
+    background-position: 100% 200%;
+  }
+}
+@keyframes rotate-moon {
+  to {
+    background-position: 200% 100%;
+  }
+}
+
+/* Styles for h1 */
+h1 {
+  margin: 15px;
+  margin-bottom: 5px;
+}
+
+/* Styles for p */
+p {
+  color: #e3e3e3;
+  margin: 2%;
+  margin-top: 0px;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: 80%;
+}
+
+h2,
+.info2-saturn h2,
+.info2-earth h2,
+.info2-Jupiter h2,
+.info2-Mercury h2,
+.info2-venus h2,
+.info2-mars h2,
+.info2-Uranus h2 .info2-Neptune h2 {
+  margin-bottom: 15px;
+  font-size: 100%;
+}
+/* Styles for h2 */
+h2 {
+  margin-bottom: 15px;
+  font-size: 100%;
+}
+
+/* Color modification for h2 within .info2-venus class */
+.info2-venus h2 {
+  color: rgb(175 91 17);
+}
+
+/* Color modification for h2 within .info2-earth class */
+.info2-earth h2 {
+  color: #2695da;
+}
+
+/* Color modification for h2 within .info2-mars class */
+.info2-mars h2 {
+  color: #dc4227;
+}
+
+/* Color modification for h2 within .info2-saturn class */
+.info2-saturn h2 {
+  color: #e4da8a;
+}
+
+/* Color modification for h2 within .info2-Jupiter class */
+.info2-Jupiter h2 {
+  color: #dde696;
+}
+
+/* Color modification for h2 within .info2-Mercury class */
+.info2-Mercury h2 {
+  color: rgb(216 158 137);
+}
+
+/* Color modification for h2 within .info2-Uranus class */
+.info2-Uranus h2 {
+  color: #35b9d1;
+}
+
+/* Color modification for h2 within .info2-Neptune class */
+.info2-Neptune h2 {
+  color: #0f8dd1;
+}
+
+/* Styles for h3 */
+h3 {
+  margin-top: 0;
+  font-size: 80%;
+  color: #ffffff;
+}
+
+/* Flex layout for .info2-Jupiter class */
+.info2-Jupiter,
+/* Flex layout for .info2 class */
+.info2,
+/* Flex layout for .info2-earth class */
+.info2-earth,
+/* Flex layout for .info2-saturn class */
+.info2-saturn,
+/* Flex layout for .info2-Mercury class */
+.info2-Mercury,
+/* Flex layout for .info2-venus class */
+.info2-venus,
+/* Flex layout for .info2-mars class */
+.info2-mars,
+/* Flex layout for .info2-Uranus class */
+.info2-Uranus,
+/* Flex layout for .info2-Neptune class */
+.info2-Neptune {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80%;
+}

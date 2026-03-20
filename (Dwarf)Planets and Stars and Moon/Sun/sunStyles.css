@@ -1,0 +1,496 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;1,300&family=Orbitron:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;1,300&family=Orbitron:wght@700&family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,400;1,300&family=Orbitron:wght@700&family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,400;1,300&family=Orbitron:wght@700;800&family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,400;1,300&family=Orbitron:wght@700;800&family=Poppins&family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+.container-1 {
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.8fr 0.2fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Main"
+    "Statistics";
+  /* !==========================CHANGE THIS===============================*/
+  background-image: url("https://solarsystem.nasa.gov/internal_resources/6055/sunherojpg");
+  background-position: right center;
+  background-size: auto;
+}
+
+.Main {
+  grid-area: Main;
+}
+
+.container-1 .main-content {
+  color: #ffd700;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  position: relative;
+  left: 100px;
+  height: 100%;
+}
+
+.container-1 .main-content h1 {
+  font-family: "Orbitron", sans-serif;
+  color: #ffd700;
+  font-size: 70px;
+}
+
+.container-1 .main-content p {
+  font-family: "DM Mono", sans-serif;
+  font-size: 20px;
+  max-width: 430px;
+  color: #ffe6c7;
+}
+.Statistics {
+  grid-area: Statistics;
+}
+
+/*transparent effects for statistics*/
+.transparent-rectangle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 22px;
+}
+.transparent-rectangle h3 {
+  display: flex;
+  justify-content: center;
+  font-family: "Orbitron", sans-serif;
+  font-size: 100%;
+  color: #ffd700;
+}
+
+.transparent-rectangle p {
+  display: flex;
+  justify-content: center;
+  color: #ffe6c7;
+  font-family: "DM Mono", sans-serif;
+  font-weight: bold;
+  font-size: large;
+}
+
+.space {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1; /* This will place the canvas behind other content */
+}
+
+/* !==========================CHANGE THIS===============================*/
+.sun-3d {
+  align-self: center; /* if you want the iframe to be centered in its flex container */
+}
+.content-section {
+  background-image: linear-gradient(#16161d, #000000 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; /* Center items horizontally, in case they're not full width */
+  height: auto; /* You might want to adjust this depending on your layout needs */
+  padding: 20px;
+}
+
+/*Header*/
+.header-container {
+  display: flex;
+  justify-content: center;
+  background-color: #16161d;
+}
+
+.header-container h2 {
+  font-family: "Orbitron", sans-serif;
+  color: #ffd700;
+  font-size: 100px;
+}
+
+.textbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.textbox p {
+  color: #ffe6c7;
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  margin: 20px;
+  max-width: 800px;
+}
+
+/********************************************************************/
+/********************************************************************/
+/********************************************************************/
+
+/* !==========================CHANGE THIS===============================*/
+/*!Facts about the Sun*/
+
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Fact-1 Fact-2 Fact-3"
+    "Fact-4 Main-Content Fact-5"
+    "Fact-6 Fact-7 Fact-8";
+
+  height: 100vh;
+  background-color: #16161d;
+  justify-content: center;
+  align-items: center;
+}
+.header-effect {
+  font-family: "Orbitron", sans-serif;
+  font-size: 15px;
+  color: #ffd700;
+}
+
+.Fact-1 {
+  grid-area: Fact-1;
+}
+
+.Fact-2 {
+  grid-area: Fact-2;
+}
+
+.Fact-3 {
+  grid-area: Fact-3;
+}
+
+.Fact-4 {
+  grid-area: Fact-4;
+}
+
+.Fact-5 {
+  grid-area: Fact-5;
+}
+
+.Fact-6 {
+  grid-area: Fact-6;
+}
+
+.Fact-7 {
+  grid-area: Fact-7;
+}
+
+.Fact-8 {
+  grid-area: Fact-8;
+}
+
+.Main-Content {
+  grid-area: Main-Content;
+}
+
+.centering {
+  color: #ffd700;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.container p {
+  font-family: "DM Mono", sans-serif;
+  font-size: 25px;
+  max-width: 400px;
+  color: #ffe6c7;
+  text-align: center;
+}
+
+.container h3 {
+  font-size: 40px;
+}
+
+/* !==========================CHANGE THIS===============================*/
+:root {
+  --sun-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/332937/sun.jpg);
+  --sun-tilt: rotate(0deg);
+  --sun-day: 600;
+  --sun-color: #cc9f4c;
+}
+
+@keyframes planetRotate {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.card__planet {
+  border-radius: 100px;
+}
+/* !===CHANGE THIS===*/
+.card--sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card--sun .planet__atmosphere {
+  /* !===CHANGE THIS===*/
+  box-shadow: inset 10px 0px 12px -2px rgba(255, 255, 255, 0.2),
+    inset -70px 0px 50px 0px black, -5px 0px 10px -4px var(--sun-color);
+}
+
+.card--sun .planet__surface {
+  background-image: var(--sun-image); /* !===CHANGE THIS===*/
+  transform: var(--sun-tilt) scale(1.2); /* !===CHANGE THIS===*/
+  /* !===CHANGE THIS===*/
+  animation: planetRotate calc(var(--sun-day) * 0.1s) linear infinite;
+}
+
+.card--sun .card__planet::before {
+  transform: var(--sun-tilt) scale(1.2); /* !===CHANGE THIS===*/
+  border-color: var(--sun-color); /* !===CHANGE THIS===*/
+  color: var(--sun-color); /* !===CHANGE THIS===*/
+}
+
+.card--sun .tilt__icon {
+  transform: var(--sun-tilt); /* !===CHANGE THIS===*/
+  color: var(--sun-color); /* !===CHANGE THIS===*/
+}
+
+.card__planet::before {
+  content: "";
+  position: absolute;
+  height: 190px;
+  z-index: -2;
+  left: 50%;
+  top: 0%;
+  border-left: 1px dashed rgba(255, 255, 255, 0.25);
+}
+
+.planet__atmosphere {
+  height: 190px;
+  width: 190px;
+  position: relative;
+  background: radial-gradient(
+    circle at 30% 50%,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0) 65%
+  );
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.planet__surface {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-size: cover;
+}
+
+.card__info {
+  font-family: "DM Mono", sans-serif;
+  width: 100%;
+}
+
+.info__title {
+  font-family: "Orbitron", sans-serif;
+  text-align: center;
+  font-size: 28px;
+}
+
+.info__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info__item {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.info__item .tilt__icon {
+  margin: 0 5px;
+}
+
+.info__label {
+  font-size: 11px;
+}
+
+.info__line {
+  flex: 1;
+  margin: 0 5px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+}
+@media only screen and (max-width: 1037px) {
+  .container-1 {
+    background-position: left center;
+  }
+
+  .container-1 .main-content {
+    color: #ffd700;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    position: relative;
+    left: 15px;
+    height: 100%;
+  }
+
+  .container-1 .main-content h1 {
+    font-family: "Orbitron", sans-serif;
+    color: #ffd700;
+    font-size: 70px;
+  }
+
+  .container-1 .main-content p {
+    font-family: "DM Mono", sans-serif;
+    font-size: 20px;
+    max-width: 400px;
+    color: #ffe6c7;
+  }
+
+  .slide-in-right {
+    opacity: 0;
+    transform: translateX(1000px);
+    transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  #unique-h2 {
+    font-size: 80px;
+  }
+  .container h3 {
+    font-size: 20px;
+  }
+  .container p {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 937px) {
+  #unique-h2 {
+    font-size: 60px;
+  }
+  .container h3 {
+    font-size: 20px;
+  }
+
+  .header-container h2 {
+    font-size: 70px;
+  }
+}
+
+@media only screen and (max-width: 838px) {
+  .transparent-rectangle h3 {
+    font-size: 80%;
+  }
+}
+
+@media only screen and (max-width: 695px) {
+  .transparent-rectangle h3 {
+    font-size: 60%;
+  }
+
+  .transparent-rectangle p {
+    font-size: large;
+  }
+
+  #unique-h2 {
+    font-size: 50px;
+  }
+
+  .container h3 {
+    font-size: 29px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container-1 {
+    background-position: center;
+    background-size: cover;
+    text-shadow: 4px 5px 9px rgba(0, 0, 0, 1);
+  }
+
+  .container-1 .main-content p {
+    background: rgba(0, 0, 0, 0.3);
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  #unique-h2 {
+    font-size: 60px;
+    text-align: center;
+    text-shadow: 3px 3px 9px rgba(255, 255, 255, 1);
+  }
+  .header-container h2 {
+    font-size: 50px;
+  }
+  .transparent-rectangle h3 {
+    text-align: center;
+    font-size: 10px;
+  }
+
+  .content-section {
+    text-align: center;
+  }
+
+  .transparent-rectangle p {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .slide-in-left:not(.hidden) {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 2fr 1fr 1fr 1fr 1fr; /* Increase 4fr for Main-Content row */
+    grid-template-areas:
+      "Fact-1"
+      "Fact-2"
+      "Fact-3"
+      "Fact-4"
+      "Main-Content"
+      "Fact-5"
+      "Fact-6"
+      "Fact-7"
+      "Fact-8";
+
+    height: 140vh;
+  }
+}

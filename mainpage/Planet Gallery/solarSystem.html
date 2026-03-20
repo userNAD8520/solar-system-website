@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="solarSystem.css" />
+    <title>Planet Gallery</title>
+  </head>
+  <body>
+    <div class="click_hover">
+      <h1>Solar System</h1>
+      <h3>Hover any orbit to stop the planet</h3>
+      <h3>click at any planet to information about it</h3>
+      <h3>IN this model one Earth year(365 days) = 10 second</h3>
+    </div>
+
+    <div id="circle-orbit-container">
+      <div id="Neptune-orbit">
+        <div class="Neptune-orbit-circles">
+          <button class="show_btn" onclick="myFunction_addNeptune()">
+            sun
+          </button>
+        </div>
+      </div>
+
+      <div id="Uranus-orbit">
+        <div class="Uranus-orbit-circles">
+          <button class="show_btn" onclick="myFunction_addUranus()">sun</button>
+        </div>
+      </div>
+
+      <div id="Saturn-orbit">
+        <div class="Saturn-orbit-circles">
+          <button class="show_btn" onclick="myFunction_addSaturn()">sun</button>
+        </div>
+      </div>
+
+      <div id="Jupiter-orbit">
+        <div class="Jupiter-orbit-circles">
+          <button class="show_btn" onclick="myFunction_addJupiter()">
+            sun
+          </button>
+        </div>
+      </div>
+
+      <div id="mars-orbit">
+        <div class="mars-orbit-circles">
+          <button class="show_btn" onclick="myFunction_addMars()">sun</button>
+        </div>
+      </div>
+
+      <!-- Circles furthest away to the central point -->
+      <div id="earth-orbit">
+        <div class="earth-orbit-circles">
+          <button class="show_btn" onclick="myFunction_addEarth()">
+            earth
+          </button>
+        </div>
+      </div>
+
+      <!-- Circles second closest to the central point -->
+      <div id="venus-orbit">
+        <div class="venus-orbit-circles">
+          <button class="show_btn" onclick="myFunction_addVenus()">sun</button>
+        </div>
+      </div>
+
+      <!-- Circles closest to the central point -->
+      <div id="Mercury-orbit">
+        <div class="Mercury-orbit-circles">
+          <button class="show_btn" onclick="myFunction_addMercury()">
+            sun
+          </button>
+        </div>
+      </div>
+
+      <div class="sun">
+        <button class="show_btn" onclick="myFunction_addSun()">sun</button>
+      </div>
+
+      <div class="planet_name">
+        <button class="show_btn_1" onclick="myFunction_addSun()">Sun</button>
+        <button class="show_btn_1" onclick="myFunction_addMercury()">
+          Mercury
+        </button>
+        <button class="show_btn_1" onclick="myFunction_addVenus()">
+          Venus
+        </button>
+        <button class="show_btn_1" onclick="myFunction_addEarth()">
+          Earth
+        </button>
+        <button class="show_btn_1" onclick="myFunction_addMars()">Mars</button>
+        <button class="show_btn_1" onclick="myFunction_addJupiter()">
+          Jupiter
+        </button>
+        <button class="show_btn_1" onclick="myFunction_addSaturn()">
+          Saturn
+        </button>
+        <button class="show_btn_1" onclick="myFunction_addUranus()">
+          Uranus
+        </button>
+        <button class="show_btn_1" onclick="myFunction_addNeptune()">
+          Neptune
+        </button>
+      </div>
+
+      <div class="sun-1" id="sun_info">
+        <button class="hide_btn" onclick="myFunction_removeSun()">x</button>
+        <div class="info">
+          <div class="info-1">
+            <h1>Sun</h1>
+            <p>
+              The Sun holds the solar system together, keeping everything from
+              the biggest planets to the smallest debris in its orbit. Our Sun
+              is a 4.5 billion-year-old star a hot glowing ball of hydrogen and
+              helium at the center of our solar system. The Sun is about 93
+              million miles (150 million kilometers) from Earth, and without its
+              energy, life as we know it could not exist here on our home
+              planet. It is a nearly perfect ball of hot plasma,heated to
+              incandescence by nuclear fusion reactions in its core. The Sun
+              radiates this energy mainly as light, ultraviolet, and infrared
+              radiation, The Sun's radius is about 695,000 kilometers (432,000
+              miles), or 109 times that of Earth. Its mass is about 330,000
+              times that of Earth, comprising about 99.86% of the total mass of
+              the Solar System
+            </p>
+            <div class="info2">
+              <div>
+                <h2>Star-Type</h2>
+                <h3>Yellow Dwarf</h3>
+              </div>
+              <div>
+                <h2>Age</h2>
+                <h3>~4.5 billion years</h3>
+              </div>
+            </div>
+
+            <div class="info2">
+              <div>
+                <h2>Distance from Galactic Center</h2>
+                <h3>26,000 light years</h3>
+              </div>
+            </div>
+          </div>
+          <div class="img" id="img1"></div>
+        </div>
+      </div>
+
+      <div class="earth-1" id="earth_info">
+        <button class="hide_btn" onclick="myFunction_removeEarth()">x</button>
+        <div class="info">
+          <div class="info-1">
+            <h1>EARTH</h1>
+            <p>
+              Earth—our home planet—is the only place we know of so far that’s
+              inhabited by living things. It's also the only planet in our solar
+              system with liquid water on the surface , Our home planet is the
+              third planet from the Sun. While Earth is only the fifth largest
+              planet in the solar system, Just slightly larger than nearby
+              Venus, Earth is the biggest of the four planets closest to the
+              Sun, all of which are made of rock and metal. Earth has a dynamic
+              atmosphere, which sustains Earth's surface conditions and protects
+              it from most meteoroids and UV-light at entry. It has a
+              composition of primarily nitrogen and oxygen. Water vapor is
+              widely present in the atmosphere, forming clouds that cover most
+              of the planet
+            </p>
+            <div class="info2-earth">
+              <div>
+                <h2>Planet Type</h2>
+                <h3>Terrestrial</h3>
+              </div>
+              <div>
+                <h2>One Way Light Time to the Sun</h2>
+                <h3>8.449017 mins</h3>
+              </div>
+            </div>
+
+            <div class="info2-earth">
+              <div>
+                <h2>DISTANCE FROM SUN</h2>
+                <h3>94,434,145 KM</h3>
+              </div>
+              <div>
+                <h2>Length of Year</h2>
+                <h3>365 Earth Days</h3>
+              </div>
+            </div>
+          </div>
+          <div class="moon-img" id="img1_moon">
+            <div class="moon">MOON</div>
+          </div>
+          <div class="img-earth" id="img1_planet"></div>
+        </div>
+      </div>
+
+      <div class="venus-1" id="venus_info">
+        <button class="hide_btn" onclick="myFunction_removeVenus()">x</button>
+        <div class="info">
+          <div class="info-1">
+            <h1>VENUS</h1>
+            <p>
+              Similar in structure and size to Earth, Venus's thick atmosphere
+              traps heat in a runaway greenhouse effect, making it the hottest
+              planet in our solar system. Venus is the second planet from the
+              Sun and is Earth’s closest planetary neighbor. It’s one of the
+              four inner, terrestrial (or rocky) planets, and it’s often called
+              Earth’s twin because it’s similar in size and density. These are
+              not identical twins, however there are radical differences between
+              the two worlds. Venus has a thick, toxic atmosphere filled with
+              carbon dioxide and it’s perpetually shrouded in thick, yellowish
+              clouds of sulfuric acid that trap heat, causing a runaway
+              greenhouse effect.even though Mercury is closer to the Sun Surface
+              temperatures on Venus are about 900 degrees Fahrenheit (475
+              degrees Celsius) hot enough to melt lead.
+            </p>
+            <div class="info2-venus">
+              <div>
+                <h2>Planet Type</h2>
+                <h3>Terrestrial</h3>
+              </div>
+              <div>
+                <h2>One Way Light Time to the Sun</h2>
+                <h3>6 mins</h3>
+              </div>
+            </div>
+
+            <div class="info2-venus">
+              <div>
+                <h2>DISTANCE FROM SUN</h2>
+                <h3>108,000,000 km</h3>
+              </div>
+              <div>
+                <h2>Length of Year</h2>
+                <h3>225 Earth Days</h3>
+              </div>
+            </div>
+          </div>
+          <div class="img-venus" id="img1_venus"></div>
+        </div>
+      </div>
+
+      <div class="mars-1" id="mars_info">
+        <button class="hide_btn" onclick="myFunction_removeMars()">x</button>
+        <div class="info">
+          <div class="info-1">
+            <h1>MARS</h1>
+            <p>
+              Mars is the fourth planet from the Sun. The reddish color of its
+              surface is due to finely grained iron (III)oxide dust in the soil,
+              giving it the nickname "the Red Planet". Mars has a second
+              smallest radius among the planets in the Solar System at 3,389.5
+              km (2,106 mi) and has a surface gravity of 3.72 m/s2 (12.2 ft/s2),
+              which is 38% of Earth's gravity. The Martian dichotomy can be
+              clearly seen on the surface: on average, the terrain on Mars
+              northern hemisphere is flatter and lower than Mars southern
+              hemisphere. Mars has a very thin atmosphere made primarily of
+              carbon dioxide and two irregularly shaped natural satellites:
+              Phobos and Deimos.
+            </p>
+            <div class="info2-mars">
+              <div>
+                <h2>Planet Type</h2>
+                <h3>Terrestrial</h3>
+              </div>
+              <div>
+                <h2>One Way Light Time to the Sun</h2>
+                <h3>13.39 mins</h3>
+              </div>
+            </div>
+
+            <div class="info2-mars">
+              <div>
+                <h2>DISTANCE FROM SUN</h2>
+                <h3>228 million KM</h3>
+              </div>
+              <div>
+                <h2>Length of Year</h2>
+                <h3>687 Earth Days</h3>
+              </div>
+            </div>
+          </div>
+          <div class="img-mars" id="img1_mars"></div>
+        </div>
+      </div>
+
+      <div class="Mercury-1" id="Mercury_info">
+        <button class="hide_btn" onclick="myFunction_removeMercury()">x</button>
+        <div class="info">
+          <div class="info-1">
+            <h1>MERCURY-PLANET</h1>
+            <p>
+              From the surface of Mercury, the Sun would appear more than three
+              times as large as it does when viewed from Earth, and the sunlight
+              would be as much as 11 times brighter. The smallest planet in our
+              solar system and nearest to the Sun, Mercury is only slightly
+              larger than Earth's Moon. Despite its proximity to the Sun,
+              Mercury is not the hottest planet in our solar system that title
+              belongs to nearby Venus,set and rise again from some parts of the
+              planet's surface. The same thing happens in reverse at sunset.
+            </p>
+            <div class="info2-Mercury">
+              <div>
+                <h2>Planet Type</h2>
+                <h3>Terrestrial</h3>
+              </div>
+              <div>
+                <h2>One Way Light Time to the Sun</h2>
+                <h3>3.2 mins</h3>
+              </div>
+            </div>
+
+            <div class="info2-Mercury">
+              <div>
+                <h2>DISTANCE FROM SUN</h2>
+                <h3>58 million KM</h3>
+              </div>
+              <div>
+                <h2>Length of Year</h2>
+                <h3>88 Earth Days</h3>
+              </div>
+            </div>
+          </div>
+          <div class="img-Mercury" id="img1_Mercury"></div>
+        </div>
+      </div>
+
+      <div class="Saturn-1" id="Saturn_info">
+        <button class="hide_btn" onclick="myFunction_removeSaturn()">x</button>
+        <div class="info">
+          <div class="info-1">
+            <h1>SATURN</h1>
+            <p>
+              Adorned with a dazzling, complex system of icy rings, Saturn is
+              unique in our solar system. The other giant planets have rings,
+              but none are as spectacular as Saturn's. Saturn is the sixth
+              planet from the Sun and the second-largest planet in our solar
+              system. Adorned with thousands of beautiful ringlets, Saturn is
+              unique among the planets. It is not the only planet to have rings
+              – made of chunks of ice and rock – but none are as spectacular or
+              as complicated as Saturn's. Like fellow gas giant Jupiter, Saturn
+              is a massive ball made mostly of hydrogen and helium. Saturn's
+              atmosphere is made up mostly of hydrogen (H2) and helium (He).
+            </p>
+            <div class="info2-saturn">
+              <div>
+                <h2>Planet Type</h2>
+                <h3>Gas Giant</h3>
+              </div>
+              <div>
+                <h2>One Way Light Time to the Sun</h2>
+                <h3>80 mins</h3>
+              </div>
+            </div>
+
+            <div class="info2-saturn">
+              <div>
+                <h2>DISTANCE FROM SUN</h2>
+                <h3>1.4 billion km</h3>
+              </div>
+              <div>
+                <h2>Length of Year</h2>
+                <h3>29 Earth years</h3>
+              </div>
+            </div>
+          </div>
+          <div class="img_saturn" id="img1_saturn"></div>
+        </div>
+      </div>
+
+      <div class="Jupiter-1" id="Jupiter_info">
+        <button class="hide_btn" onclick="myFunction_removeJupiter()">x</button>
+        <div class="info">
+          <div class="info-1">
+            <h1>JUPITER</h1>
+            <p>
+              Jupiter is more than twice as massive than the other planets of
+              our solar system combined. The giant planet' s Great Red Spot is a
+              centuries-old storm bigger than Earth. upiter has a long history
+              of surprising scientists all the way back to 1610 when Galileo
+              Galilei found the first moons beyond Earth. That discovery changed
+              the way we see the universe. Fifth in line from the Sun, Jupiter
+              is, by far, the largest planet in the solar system . Jupiter's
+              familiar stripes and swirls are actually cold, windy clouds of
+              ammonia and water, floating in an atmosphere of hydrogen and
+              helium. Jupiter’s iconic Great Red Spot is a giant storm bigger
+              than Earth that has raged for hundreds of years.
+            </p>
+            <div class="info2-Jupiter">
+              <div>
+                <h2>Planet Type</h2>
+                <h3>Gas Giant</h3>
+              </div>
+              <div>
+                <h2>One Way Light Time to the Sun</h2>
+                <h3>43 mins</h3>
+              </div>
+            </div>
+
+            <div class="info2-Jupiter">
+              <div>
+                <h2>DISTANCE FROM SUN</h2>
+                <h3>778 million KM</h3>
+              </div>
+              <div>
+                <h2>Length of Year</h2>
+                <h3>4,333 Earth Days</h3>
+              </div>
+            </div>
+          </div>
+          <div class="img_Jupiter" id="img1_Jupiter"></div>
+        </div>
+      </div>
+
+      <div class="Uranus-1" id="Uranus_info">
+        <button class="hide_btn" onclick="myFunction_removeUranus()">x</button>
+        <div class="info">
+          <div class="info-1">
+            <h1>URANUS</h1>
+            <p>
+              Uranus—seventh planet from the Sun—rotates at a nearly 90-degree
+              angle from the plane of its orbit. This unique tilt makes Uranus
+              appear to spin on its side. and has the third-largest diameter in
+              our solar system. It was the first planet found with the aid of a
+              telescope, Uranus was discovered in 1781 by astronomer William
+              Herschel, although he originally thought it was either a comet or
+              a star. it was two years later that the object was universally
+              accepted as a new planet, in part because of observations by
+              astronomer Johann Elert Bode. Herschel tried unsuccessfully to
+              name his discovery Georgium Sidus after King George III. Instead,
+              the scientific community accepted Bode's suggestion to name it
+              Uranus, the Greek god of the sky as suggested by Bode.​
+            </p>
+            <div class="info2-Uranus">
+              <div>
+                <h2>Planet Type</h2>
+                <h3>ICE Giant</h3>
+              </div>
+              <div>
+                <h2>One Way Light Time to the Sun</h2>
+                <h3>2.4 hours</h3>
+              </div>
+            </div>
+
+            <div class="info2-Uranus">
+              <div>
+                <h2>DISTANCE FROM SUN</h2>
+                <h3>2.9 billion KM</h3>
+              </div>
+              <div>
+                <h2>Length of Year</h2>
+                <h3>30,687 Earth Days</h3>
+              </div>
+            </div>
+          </div>
+          <div class="img-Uranus" id="img1_Uranus"></div>
+        </div>
+      </div>
+
+      <div class="Neptune-1" id="Neptune_info">
+        <button class="hide_btn" onclick="myFunction_removeNeptune()">x</button>
+        <div class="info">
+          <div class="info-1">
+            <h1>NEPTUNE</h1>
+            <p>
+              Neptune—the eighth and most distant major planet orbiting our
+              Sun—is dark, cold and whipped by supersonic winds. It was the
+              first planet located through mathematical calculations. Dark,
+              cold, and whipped by supersonic winds, More than 30 times as far
+              from the Sun as Earth, Neptune is the only planet in our solar
+              system not visible to the naked eye and the first predicted by
+              mathematics before its discovery. In 2011 Neptune completed its
+              first 165-year orbit since its discovery in 1846. NASA's Voyager 2
+              is the only spacecraft to have visited Neptune up close. the
+              third-most-massive planet, and the densest giant planet. It is 17
+              times the mass of Earth, and slightly more massive than its
+              near-twin Uranus. Neptune is denser and physically smaller than
+              Uranus because its greater mass causes more gravitational
+              compression of its atmosphere.
+            </p>
+            <div class="info2-Neptune">
+              <div>
+                <h2>Planet Type</h2>
+                <h3>ICE Giant</h3>
+              </div>
+              <div>
+                <h2>One Way Light Time to the Sun</h2>
+                <h3>4.2 hours</h3>
+              </div>
+            </div>
+
+            <div class="info2-Neptune">
+              <div>
+                <h2>DISTANCE FROM SUN</h2>
+                <h3>4.5 billion KM</h3>
+              </div>
+              <div>
+                <h2>Length of Year</h2>
+                <h3>60,190 Earth Days</h3>
+              </div>
+            </div>
+          </div>
+          <div class="img-Neptune" id="img1_Neptune"></div>
+        </div>
+      </div>
+    </div>
+    <script src="solarSystem.js"></script>
+  </body>
+</html>

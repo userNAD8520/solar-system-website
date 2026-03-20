@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../animations/animate.css" />
+    <link rel="stylesheet" href="./mainStylesPage.css" />
+    <title>Our Solar System by Dan Shakya</title>
+  </head>
+  <body>
+    <!-- !Navigation and Main Content -->
+    <div class="NavBar">
+      <!-- Navigation Menu -->
+      <nav id="menu">
+        <input
+          type="checkbox"
+          id="responsive-menu"
+          onclick="updatemenu()"
+          title="Toggle navigation menu"
+          aria-label="Toggle navigation menu"
+        /><label for="responsive-menu"></label>
+        <ul>
+          <!-- PLANETS dropdown menu -->
+          <li>
+            <a class="dropdown-arrow" href="">PLANETS</a>
+            <ul class="sub-menus">
+              <li>
+                <a
+                  href="../(Dwarf)Planets and Stars and Moon/planet pages/Earth/earth.html"
+                  >EARTH</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../(Dwarf)Planets and Stars and Moon/planet pages/Mars/mars.html"
+                  >MARS</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../(Dwarf)Planets and Stars and Moon/planet pages/Neptune/neptune.html"
+                  >NEPTUNE</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../(Dwarf)Planets and Stars and Moon/planet pages/Venus/venus.html"
+                  >VENUS</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../(Dwarf)Planets and Stars and Moon/planet pages/Saturn/saturn.html"
+                  >SATURN</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../(Dwarf)Planets and Stars and Moon/planet pages/Uranus/uranus.html"
+                  >URANUS</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../(Dwarf)Planets and Stars and Moon/planet pages/Mercury/mercury.html"
+                  >MERCURY</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../(Dwarf)Planets and Stars and Moon/planet pages/Jupiter/jupiter.html"
+                  >JUPITER</a
+                >
+              </li>
+            </ul>
+          </li>
+          <!-- DWARF PLANETS dropdown menu -->
+          <li>
+            <a class="dropdown-arrow" href="">DWARF PLANETS</a>
+            <ul class="sub-menus">
+              <li>
+                <a
+                  href="../(Dwarf)Planets and Stars and Moon/dwarf planet pages/Ceres/ceres.html"
+                  >CERES</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../(Dwarf)Planets and Stars and Moon/dwarf planet pages/Makemake/makemake.html"
+                  >MAKEMAKE</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../(Dwarf)Planets and Stars and Moon/dwarf planet pages/Pluto/pluto.html"
+                  >PLUTO</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../(Dwarf)Planets and Stars and Moon/dwarf planet pages/Haumea/haumea.html"
+                  >HAUMEA</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../(Dwarf)Planets and Stars and Moon/dwarf planet pages/Eris/eris.html"
+                  >ERIS</a
+                >
+              </li>
+            </ul>
+          </li>
+          <!-- SOLAR SYSTEM dropdown menu -->
+          <li>
+            <a class="dropdown-arrow" href="">SOLAR SYSTEM</a>
+            <ul class="sub-menus">
+              <li>
+                <a href="../(Dwarf)Planets and Stars and Moon/Moon/moon.html"
+                  >EARTH'S MOON</a
+                >
+              </li>
+              <li>
+                <a href="../(Dwarf)Planets and Stars and Moon/Sun/sun.html"
+                  >SUN</a
+                >
+              </li>
+              <li>
+                <a href="../Outer Solar System/Oort Cloud/oort.html"
+                  >OORT CLOUD</a
+                >
+              </li>
+              <li>
+                <a href="../Outer Solar System/Kuiper Belt/Kuiper.html"
+                  >KUIPER BELT</a
+                >
+              </li>
+            </ul>
+          </li>
+          <!-- Add more menu entries here -->
+          <li>
+            <a href="./Planet Gallery/solarSystem.html">PLANET GALLERY</a>
+          </li>
+
+          <li>
+            <a href="./Solar System Quiz/quiz.html">SOLAR SYSTEM QUIZ</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <section>
+      <!-- !SECTION 1: Navigation and Main Content -->
+      <canvas class="space"></canvas>
+
+      <div class="container-1">
+        <!-- Main content -->
+        <div class="Main">
+          <div class="main-content">
+            <h1 class="hidden slide-in-left">Our Solar System</h1>
+            <p class="hidden fade-in-fwd">
+              Our home is part of a planetary system that revolves around a star
+              located in one of the outer spiral arms of the immense Milky Way
+              galaxy.
+            </p>
+          </div>
+        </div>
+        <!-- Statistics content -->
+        <div class="Statistics hidden fade-in-fwd">
+          <aside class="transparent-rectangle">
+            <div class="text-group">
+              <h3>PLANETS | DWARF PLANETS</h3>
+              <p>8|5</p>
+            </div>
+
+            <div class="text-group">
+              <h3>MOONS</h3>
+              <p>200+</p>
+            </div>
+
+            <div class="text-group">
+              <h3>ASTEROIDS</h3>
+              <p>1,290,307</p>
+            </div>
+
+            <div class="text-group">
+              <h3>COMETS</h3>
+              <p>3,877</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <!-- !SECTION 2: Cosmic Chronicles -->
+      <div class="header-container">
+        <h2 class="hidden slide-in-right">Cosmic Chronicles</h2>
+      </div>
+      <div class="cosmic-chronicles">
+        <!-- Content Item 1: Unveiling the Cosmos -->
+        <div class="content-item01 hidden slide-in-blurred-right">
+          <article class="card">
+            <img
+              src="../images/solar system-main.jpg"
+              alt="picture of our solar system"
+            />
+            <div class="card_content">
+              <span class="card_title">Unveiling the Cosmos</span>
+              <span class="card_subtitle"
+                >An Odyssey into the Vast Expanse of Space.</span
+              >
+              <p class="card_description">
+                Join us on an extraordinary journey through the limitless realms
+                of the universe. From mesmerizing celestial bodies to
+                captivating astronomical phenomena, this immersive experience
+                offers a glimpse into the awe-inspiring beauty and intricacies
+                of the cosmos.
+              </p>
+            </div>
+          </article>
+          <div class="text_1">
+            <p>
+              Our solar system includes the Sun, planets (Mercury, Venus, Earth,
+              Mars, Jupiter, Saturn, Uranus, Neptune), dwarf planets (like
+              Pluto), moons, and various celestial objects.
+            </p>
+          </div>
+        </div>
+        <!-- Content Item 2: Journeying Beyond the Stars -->
+        <div class="content-item02 hidden slide-in-blurred-left">
+          <article class="card">
+            <img
+              src="../images/pexels-felix-mittermeier-2832084.jpg"
+              alt="pictures of stars"
+            />
+            <div class="card_content">
+              <span class="card_title">Journeying Beyond the Stars</span>
+              <span class="card_subtitle">Exploring the Wonders of Space.</span>
+              <p class="card_description">
+                Space,the vast expanse beyond our planet, holds countless
+                wonders and mysteries waiting to be explored. Among its most
+                captivating features are the stars, shimmering celestial bodies
+                that dot the night sky, forming intricate constellations and
+                galaxies.
+              </p>
+            </div>
+          </article>
+          <div class="text_2">
+            <p>
+              The number of planets in the universe exceeds the number of stars.
+              We have discovered thousands of planetary systems in the Milky
+              Way, with more being found. Other stars likely have their own
+              planets, and there are countless galaxies in the universe.
+            </p>
+          </div>
+        </div>
+        <!-- Content Item 3: The Deep Universe -->
+        <div class="content-item03 hidden slide-in-blurred-right">
+          <article class="card">
+            <img
+              src="../images/pexels-pixabay-2150.jpg"
+              alt="image of milky way galaxy"
+            />
+            <div class="card_content">
+              <span class="card_title">The Deep Universe</span>
+              <span class="card_subtitle">Peering into Cosmic Extremes.</span>
+              <p class="card_description">
+                The number of planets in the universe exceeds the number of
+                stars. We have discovered thousands of planetary systems in the
+                Milky Way, with more being found. Other stars likely have their
+                own planets, and there are countless galaxies in the universe.
+              </p>
+            </div>
+          </article>
+          <div class="text_3">
+            <p>
+              Although our planet is tiny in the grand scheme, we are not alone.
+              The universe is teeming with planets, stars, and the possibility
+              of life.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <!-- !SECTION 3: Why "Solar System"? -->
+      <div class="header-container">
+        <h2 id="unique-h2" class="hidden fade-in-fwd">Why "Solar System"?</h2>
+      </div>
+      <div class="why-solar-system">
+        <div class="main-p">
+          <p class="hidden fade-in-fwd">
+            Countless planetary systems, with planets orbiting a central star,
+            populate the universe like ours. We call our system 'the solar
+            system', using 'solar' from 'solis', Latin for Sun, to describe
+            Sun-related matters.
+          </p>
+        </div>
+        <div class="scale">
+          <!-- Blog Post 1 -->
+          <div class="container-blog hidden tilt-in-top-1">
+            <div class="post">
+              <div class="header_post">
+                <img
+                  src="https://images.pexels.com/photos/3374210/pexels-photo-3374210.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  alt=""
+                />
+              </div>
+              <div class="body_post">
+                <div class="post_content">
+                  <h2>Universal Law of Gravitation</h2>
+                  <p>
+                    Various planetary systems, each with planets revolving
+                    around a main star, exist in the cosmos. Despite their
+                    differences, they all follow the universal law of
+                    gravitation with the central star as the gravitational
+                    fulcrum.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Blog Post 2 -->
+          <div class="container-blog hidden tilt-in-top-1">
+            <div class="post">
+              <div class="header_post">
+                <img
+                  src="https://imageio.forbes.com/specials-images/imageserve/624c6d084510a29690cb8b21/0x0.jpg?format=jpg&width=1200"
+                  alt=""
+                />
+              </div>
+              <div class="body_post">
+                <div class="post_content">
+                  <h2>Decoding 'Solar' in Solar System</h2>
+                  <p>
+                    "Our 'solar' system, a specific grouping of celestial
+                    bodies, underscores the Sun's importance in our existence.
+                    The term 'solar', from the Latin 'solis' meaning Sun,
+                    encapsulates all Sun-related phenomena, from its
+                    nuclear-powered glow to its gravitational impact.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Blog Post 3 -->
+          <div class="container-blog hidden tilt-in-top-1">
+            <div class="post">
+              <div class="header_post">
+                <img
+                  src="https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  alt=""
+                />
+              </div>
+              <div class="body_post">
+                <div class="post_content">
+                  <h2>The Unique Perspective of Our Solar System</h2>
+                  <p>
+                    Though our solar system is one among countless in the
+                    universe, its distinctive composition, Earth's presence, and
+                    life-supporting capacity under the Sun's ('solis') influence
+                    provide a unique framework for studying other systems and
+                    understanding the wider universe.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <!-- !SECTION 4: Cosmic Dimensions -->
+      <div class="header-container">
+        <h2 class="hidden fade-in-fwd">Cosmic Dimensions</h2>
+      </div>
+
+      <div class="cosmic-dimensions">
+        <div class="textbox">
+          <p class="hidden flip-in-hor-top">
+            Beyond the eight planets that encircle the Sun, our solar system
+            extends much further. One significant region is the
+            <a
+              href="../Outer Solar System/Kuiper Belt/Kuiper.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><strong class="highlight-link">Kuiper Belt</strong></a
+            >, positioned beyond Neptune's orbit. The Kuiper Belt comprises a
+            vast expanse of icy bodies, with most being smaller than the
+            renowned Kuiper Belt Object, the dwarf planet Pluto.
+          </p>
+          <div class="image-info hidden slide-in-blurred-right">
+            <img
+              src="https://solarsystem.nasa.gov/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBc3hPIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bcd99f2f7a03d166a514de66284bc73ae54c32eb/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MWm05eWJXRjBPZ2wzWldKdyIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--24997868381b1f10543ce76109cabaf03df01923/Pluto.jpeg?content_type=image%2Fwebp&disposition=inline"
+              class="picture-sizing tilt"
+              alt=""
+            />
+            <p class="new-text hidden flip-in-hor-top">
+              NASA's New Horizons spacecraft captured this high-resolution
+              enhanced color view of Pluto on July 14, 2015.
+            </p>
+          </div>
+
+          <p class="hidden flip-in-hor-top">
+            The
+            <a
+              href="../Outer Solar System/Oort Cloud/oort.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><strong class="highlight-link">Oort Cloud</strong></a
+            >
+            is a vast spherical shell surrounding our solar system, extending
+            beyond the Kuiper Belt. While never directly observed, its existence
+            is supported by mathematical models and observations of comets
+            originating from this distant region.
+          </p>
+          <p class="hidden flip-in-hor-top">
+            Comprised of icy debris, some as large as mountains, the Oort Cloud
+            orbits the Sun at an astonishing distance of up to 1.6 light-years
+            away. It stretches from 5,000 to 100,000 astronomical units (AU),
+            with one AU being the distance from the Sun to Earth (about 93
+            million miles or 150 million kilometers). This vast shell marks the
+            boundary of the Sun's gravitational influence, allowing orbiting
+            objects to reverse course and return closer to our Sun.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="background-image">
+      <!-- !Slider -->
+      <h2 class="text-effects">More Destinations</h2>
+      <div class="gallery-wrap">
+        <img
+          src="../images/back-purple.png"
+          id="backBtn"
+          alt="Previous destinations"
+          title="Previous destinations"
+        />
+        <div class="gallery">
+          <div>
+            <span>
+              <a
+                href="../(Dwarf)Planets and Stars and Moon/planet pages/Jupiter/jupiter.html"
+              >
+                <img src="../images/jupiter-silder.png" alt="" />
+                <p>Jupiter</p>
+              </a>
+            </span>
+            <span>
+              <a
+                href="../(Dwarf)Planets and Stars and Moon/planet pages/Earth/earth.html"
+              >
+                <img src="../images/earth-silder.png" alt="" />
+                <p>Earth</p>
+              </a>
+            </span>
+            <span>
+              <a
+                href="../(Dwarf)Planets and Stars and Moon/planet pages/Mercury/mercury.html"
+              >
+                <img src="../images/mercury-silder.png" alt="" />
+                <p>Mercury</p>
+              </a>
+            </span>
+          </div>
+          <div>
+            <span>
+              <a
+                href="../(Dwarf)Planets and Stars and Moon/planet pages/Mars/mars.html"
+              >
+                <img src="../images/mars-silder.png" alt="" />
+                <p>Mars</p>
+              </a>
+            </span>
+            <span>
+              <a
+                href="../(Dwarf)Planets and Stars and Moon/planet pages/Venus/venus.html"
+              >
+                <img src="../images/venus-silder.png" alt="" />
+                <p>Venus</p>
+              </a>
+            </span>
+            <span>
+              <a
+                href="../(Dwarf)Planets and Stars and Moon/planet pages/Uranus/uranus.html"
+              >
+                <img src="../images/uranus-silder.png" alt="" />
+                <p>Uranus</p>
+              </a>
+            </span>
+          </div>
+          <div>
+            <span>
+              <a
+                href="../(Dwarf)Planets and Stars and Moon/planet pages/Saturn/saturn.html"
+              >
+                <img src="../images/saturn-silder.png" alt="" />
+                <p>Saturn</p>
+              </a>
+            </span>
+            <span>
+              <a
+                href="../(Dwarf)Planets and Stars and Moon/planet pages/Neptune/neptune.html"
+              >
+                <img src="../images/neptune-silder.png" alt="" />
+                <p>Neptune</p>
+              </a>
+            </span>
+            <span>
+              <a href="../(Dwarf)Planets and Stars and Moon/Moon/moon.html">
+                <img src="../images/moon-silder.png" alt="" />
+                <p>Moon</p>
+              </a>
+            </span>
+          </div>
+        </div>
+        <img
+          src="../images/forward-purple.png"
+          id="forwardBtn"
+          alt="Next destinations"
+          title="Next destinations"
+        />
+      </div>
+    </section>
+
+    <script src="./heroBackground.js"></script>
+    <script src="./navbar.js"></script>
+    <script src="../animations/animate.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
